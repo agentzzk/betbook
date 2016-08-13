@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -16,11 +17,15 @@ public class MainLogin extends AppCompatActivity {
 
     }
 
-    protected void getDays(View view) {
-        Spinner month = (Spinner) findViewById(R.id.months);
-        daysOfMonths sample = new daysOfMonths();
-        int days = sample.days(String.valueOf(month.getSelectedItem()));
-        TextView text = (TextView) findViewById(R.id.displayDays);
-        text.setText("This month has " + days + " days.");
+    protected void generateMadlib(View view) {
+        String words[] = {((EditText) findViewById(R.id.editText)).getText().toString(),
+                        ((EditText) findViewById(R.id.editText2)).getText().toString(),
+                        ((EditText) findViewById(R.id.editText3)).getText().toString(),
+                        ((EditText) findViewById(R.id.editText4)).getText().toString(),
+                        ((EditText) findViewById(R.id.editText5)).getText().toString(),
+                        ((EditText) findViewById(R.id.editText6)).getText().toString()};
+        TextView madlib = (TextView) findViewById(R.id.madlibHolder);
+        String text = new madlibs().getMadlib(words);
+        madlib.setText(text);
     }
 }
