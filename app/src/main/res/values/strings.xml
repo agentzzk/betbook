@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">Bet Book</string>
     <string name="button">Make Madlib</string>
+
+    <!-- Login Screen -->
+    <string name="MainLogin_username">Username</string>
+    <string name="MainLogin_password">Password</string>
+    <string name="MainLogin_signin">Sign In</string>
+
+    <!-- Home Screen -->
+    <string name="Home_createBet">New Bet</string>
+    <string-array name="Home_betList">
+        <item>Adil bets Malik that he can beat him in soccer.</item>
+        <item>Zain bets Adil that he is cooler.</item>
+        <item>Zain bets Malik that he is really a Mexican.</item>
+    </string-array>
+
+    <!-- Create Bet Screen -->
+    <string name="CreateBet_saveBet">Save and Start Bet</string>
 </resources>
