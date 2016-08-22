@@ -1,5 +1,6 @@
 package com.zainzulfiqar.betbook;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +16,17 @@ public class Home extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
+        // Display active bets.
         ListView listBets = getListView();
-        String[] test = {"hello", "testing", "123"};
-        ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, test);
+        Bet list = new Bet();
+        ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list.getAllBets());
         listBets.setAdapter(listAdapter);
+    }
+
+    protected void createBet(View view) {
+        Intent create = new Intent(this, CreateBet.class);
+        startActivity(create);
     }
 }

@@ -8,7 +8,7 @@
     <string name="MainLogin_signin">Sign In</string>
 
     <!-- Home Screen -->
-    <string name="Home_createBet">New Bet</string>
+    <string name="Home_createBet">Create new Bet</string>
     <string-array name="Home_betList">
         <item>Adil bets Malik that he can beat him in soccer.</item>
         <item>Zain bets Adil that he is cooler.</item>

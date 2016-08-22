@@ -2,20 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.zainzulfiqar.betbook.Home">
 
     <ListView
-        android:id="@+id/listBets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/Home_betList" />
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
 
     <Button
+        android:id="@+id/newBet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Home_createBet"
-        android:onClick="createBet"/>
+        android:layout_gravity="center"
+        android:onClick="createBet"
+        android:layout_marginBottom="10dp"
+        android:text="@string/Home_createBet" />
 
 </LinearLayout>
