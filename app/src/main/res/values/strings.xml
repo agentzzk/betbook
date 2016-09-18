@@ -17,4 +17,6 @@
 
     <!-- Create Bet Screen -->
     <string name="CreateBet_saveBet">Save and Start Bet</string>
+    <string name="CreateBet_Title">Bet Title</string>
+    <string name="CreateBet_Description">Bet Description</string>
 </resources>
