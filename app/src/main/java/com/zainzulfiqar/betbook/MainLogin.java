@@ -15,10 +15,14 @@ public class MainLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    protected void signIn(View view) {
-        Intent signIn = new Intent(this, Home.class);
-        startActivity(signIn);
+        Button signIn = (Button) findViewById(R.id.signIn);
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signIn = new Intent(getApplicationContext(), Home.class);
+                startActivity(signIn);
+            }
+        });
     }
 }
