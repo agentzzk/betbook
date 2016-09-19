@@ -33,6 +33,7 @@ public class CreateBet extends AppCompatActivity {
                 Double amount = Double.parseDouble(amountText.getText().toString());
 
                 db.addBet(new Bet(title, description, amount));
+                db.close(); // Closing database connection
 
                 Intent home = new Intent(getApplicationContext(), Home.class);
                 startActivity(home);

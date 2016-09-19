@@ -9,11 +9,6 @@
 
     <!-- Home Screen -->
     <string name="Home_createBet">Create new Bet</string>
-    <string-array name="Home_betList">
-        <item>Adil bets Malik that he can beat him in soccer.</item>
-        <item>Zain bets Adil that he is cooler.</item>
-        <item>Zain bets Malik that he is really a Mexican.</item>
-    </string-array>
 
     <!-- Create Bet Screen -->
     <string name="CreateBet_saveBet">Save and Start Bet</string>
@@ -21,4 +16,12 @@
     <string name="CreateBet_Description">Bet Description</string>
     <string name="CreateBet_Involved">People Involved:</string>
     <string name="CreateBet_Amount">Bet Value</string>
+
+    <!-- Show Bet Screen -->
+    <string name="ShowBet_saveBet">Save and Start Bet</string>
+    <string name="ShowBet_Title">Bet Title</string>
+    <string name="ShowBet_Description">Bet Description</string>
+    <string name="ShowBet_Involved">People Involved:</string>
+    <string name="ShowBet_Amount">Bet Value</string>
+    <string name="ShowBet_editBet">Edit</string>
 </resources>

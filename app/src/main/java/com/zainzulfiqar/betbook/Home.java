@@ -18,7 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Home extends ListActivity {
@@ -44,6 +43,20 @@ public class Home extends ListActivity {
                 startActivity(create);
             }
         });
+
+        listBets.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView betIDField = (TextView) view.findViewById(R.id.listItemID);
+                int betID = Integer.parseInt(betIDField.getText().toString());
+                System.out.println(betID);
+                Intent intent = new Intent(getBaseContext(), ShowBet.class);
+                intent.putExtra("EXTRA_BET_ID", betID);     // SQLite indexes start at 1
+                startActivity(intent);
+            }
+        });
+
+        db.close();
     }
 
     //custom ArrayAdapter
@@ -69,11 +82,13 @@ public class Home extends ListActivity {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
             View view = inflater.inflate(R.layout.bets_list, null);
 
+            TextView betID = (TextView) view.findViewById(R.id.listItemID);
             TextView title = (TextView) view.findViewById(R.id.listItemTitle);
             TextView description = (TextView) view.findViewById(R.id.listItemDescription);
             TextView amount = (TextView) view.findViewById(R.id.listItemAmount);
 
-            //set price and rental attributes
+            //set attributes
+            betID.setText("" + bet.getID());
             title.setText(bet.getTitle());
             description.setText(bet.getDescription());
             amount.setText("$" + String.format("%.2f", bet.getAmount()));

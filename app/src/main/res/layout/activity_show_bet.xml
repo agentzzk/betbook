@@ -1,8 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.zainzulfiqar.betbook.ShowBet">
 
-</RelativeLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/showTitle"
+        style="@style/FullWidthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CreateBet_Title" />
+
+    <TextView
+        android:id="@+id/showDescription"
+        style="@style/FullWidthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CreateBet_Description" />
+
+    <TextView
+        style="@style/FullWidthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CreateBet_Involved" />
+
+    <TextView
+        style="@style/FullWidthTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CreateBet_Amount" />
+
+    <Button
+        android:id="@+id/saveBet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/text_padding"
+        android:text="@string/ShowBet_editBet"
+        android:theme="@style/MaterialButton" />
+
+</LinearLayout>
